@@ -22,7 +22,7 @@
 - [x] 样式/滚动修复：所有视图统一包在 `sawb-root` 中，`<style>` 不再只在列表页存在；内容区固定为 `flex:1; min-height:0; overflow-y:auto`，详情与代码页可正常向下滚动；
 - [x] PC 宽屏优化：文档限宽居中、仓库卡片间距/内边距加大、目录树与代码区统一版心、窄屏单列回退；
 - [x] Markdown 表格：识别表头/分隔行/数据行，Host 输出结构化 table 块，Client 渲染为可横向滚动的表格；
-- [x] 市场发布准备：新增 `PUBLISHING.md` 与插件目录 `.gitignore`，移除 `private`，`npm pack` 可通过；实际投稿仍待公开 GitHub 仓库与账号授权；
+- [x] 市场发布准备：新增 `PUBLISHING.md` 与插件目录 `.gitignore`，移除 `private`，`npm pack` 可通过；GitHub Release `v0.1.1` 已创建；npm `dsh-superagent-workbench@0.1.1` 已发布；市场 PR 待仓库满 1 天；
 - [x] 主题：只用 `--dsw-alias-*` 令牌，无字面色值，类名统一 `sawb-` 前缀；文案走 `ctx.locale`（zh / en，另兼容 zh-CN），插件元信息 `meta.title/description` 与原创 `icon.svg` 齐备；
 - [x] 安装：`plugin_manager install_bundle` → `application: applied`，`warnings: []`；
 - [x] Host 快照与 React 组件在真实数据上做过冒烟（见下）。

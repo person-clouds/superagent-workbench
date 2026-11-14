@@ -94,7 +94,8 @@ cd /home/zh/www/personalCloud/task/superagent-workbench
 - 发布到 DSH 插件市场：见 [`PUBLISHING.md`](PUBLISHING.md)。
 - 公开仓库：<https://github.com/person-clouds/superagent-workbench>。
 - GitHub Release 安装包：<https://github.com/person-clouds/superagent-workbench/releases/latest/download/dsh-superagent-workbench.tgz>。
-- npm 包：`dsh-superagent-workbench`。
+- npm 包：<https://www.npmjs.com/package/dsh-superagent-workbench>。
+- npm 安装：`dsh plugin --profile web add dsh-superagent-workbench`。
 
 ## 安全边界
 
