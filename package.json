@@ -1,0 +1,58 @@
+{
+  "name": "dsh-superagent-workbench",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "把 dsh-superagent 的工单、交付分支改动与工单文档收进 DSH 侧栏，作为官方 Superagent 面板的补充视图。",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "lib/tickets.js",
+    "lib/gitdata.js",
+    "lib/markdown.js",
+    "lib/repos.js",
+    "locale/zh.json",
+    "locale/en.json",
+    "icon.svg"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": "*"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/person-clouds/superagent-workbench.git"
+  },
+  "homepage": "https://github.com/person-clouds/superagent-workbench#readme",
+  "bugs": {
+    "url": "https://github.com/person-clouds/superagent-workbench/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "dsh",
+    "superagent",
+    "tickets",
+    "code-browser"
+  ],
+  "engines": {
+    "node": ">=22.5.0"
+  }
+}

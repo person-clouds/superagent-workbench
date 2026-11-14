@@ -1,0 +1,5 @@
+# dsh-superagent 工作台：Host 端只读读取超级代理的工单库与交付仓库，Client 端在侧栏加一个「超级代理」面板。
+# 所有路径都有默认值，换机器只需改 stateDir / repoDir。
+- insert:
+    - id: dsh-superagent-workbench
+      name: dsh-superagent-workbench
