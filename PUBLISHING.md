@@ -1,8 +1,10 @@
 # 发布到 DSH 插件市场
 
-> 状态：本地发布物已准备；尚未发布。  
-> 目标仓库：<https://github.com/person-clouds/superagent-workbench>  
-> 当前阻塞：本机 git 身份 `zhyfor` 对该仓库没有写权限（HTTP 403）；npm 未登录。
+> 状态：GitHub 已发布；npm 待登录发布；市场条目待仓库满 1 天后提交。  
+> 公开仓库：<https://github.com/person-clouds/superagent-workbench>  
+> GitHub Release：<https://github.com/person-clouds/superagent-workbench/releases/tag/v0.1.1>  
+> 安装包：<https://github.com/person-clouds/superagent-workbench/releases/latest/download/dsh-superagent-workbench.tgz>  
+> 当前阻塞：npm 未登录；awesome-dsh-plugin 要求仓库创建满 1 天（创建于 2026-11-14 05:12 UTC）。
 
 ## 市场收录规则（来自 awesome-dsh-plugin/contributing.md）
 
@@ -33,14 +35,16 @@ git push -u origin main
 
 ## 二、构建并验证安装包
 
+已生成：
+
 ```bash
 cd /home/zh/www/personalCloud/task/superagent-workbench
-npm pack
-# 产物：dsh-superagent-workbench-0.1.0.tgz
-
-# 本地验证安装（示例，使用测试 profile）
-dsh plugin --profile test add ./dsh-superagent-workbench-0.1.0.tgz
+npm pack --pack-destination release
+# 产物：release/dsh-superagent-workbench-0.1.1.tgz
 ```
+
+GitHub Release 资源名保持无版本号，便于 `latest/download` 长期有效：
+`dsh-superagent-workbench.tgz`。
 
 ## 三、发布 npm（推荐，可选）
 
@@ -53,11 +57,13 @@ npm publish --access public
 
 ## 四、提交市场条目
 
-在 awesome-dsh-plugin 仓库新建：
+本地草稿：`market/person-clouds__superagent-workbench.yml`。
+
+提交到 awesome-dsh-plugin 仓库时，把内容放到：
 
 `data/plugins/person-clouds__superagent-workbench.yml`
 
-内容：
+条目内容：
 
 ```yaml
 url: https://github.com/person-clouds/superagent-workbench
@@ -74,6 +80,7 @@ description:
 
 ## 五、当前阻塞
 
-- 需要给 `zhyfor` 授予 `person-clouds/superagent-workbench` 写权限，或改用有权限的 GitHub 账号；
-- npm 需要先执行 `npm login`，或在本机配置可发布 `dsh-superagent-workbench` 的 `NPM_TOKEN`；
-- 完成后即可执行：`npm publish --access public`，再把插件推送到 GitHub 并提交 awesome-dsh-plugin PR。
+- npm：需先在 <https://www.npmjs.com/signup> 注册，再执行
+  `npm login --registry=https://registry.npmjs.org`；
+- 市场 PR：仓库需创建满 1 天，2026-11-15 05:12 UTC 之后可提交；
+- npm 发布命令：`npm publish --registry=https://registry.npmjs.org --access public`。

@@ -93,6 +93,7 @@ cd /home/zh/www/personalCloud/task/superagent-workbench
 - 卸载：插件管理器移除 `dsh-superagent-workbench` 即可（不删本目录）。
 - 发布到 DSH 插件市场：见 [`PUBLISHING.md`](PUBLISHING.md)。
 - 公开仓库：<https://github.com/person-clouds/superagent-workbench>。
+- GitHub Release 安装包：<https://github.com/person-clouds/superagent-workbench/releases/latest/download/dsh-superagent-workbench.tgz>。
 - npm 包：`dsh-superagent-workbench`。
 
 ## 安全边界

@@ -1,0 +1,7 @@
+url: https://github.com/person-clouds/superagent-workbench
+name: person-clouds/superagent-workbench
+category: ui
+description:
+  en: 'Superagent delivery desk for DSH: browse tickets, execution reports, branch diffs, Markdown docs and read-only Git repositories from the sidebar.'
+  zh: 'DSH 侧栏的 superagent 交付台：查看工单、执行报告、分支改动、Markdown 文档与只读代码仓库。'
+tarball: https://github.com/person-clouds/superagent-workbench/releases/latest/download/dsh-superagent-workbench.tgz
