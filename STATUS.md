@@ -1,3 +1,8 @@
+---
+audience: shared
+status: current
+---
+
 # STATUS — 交付台 DSH 插件
 
 - 更新时间：2026-11-14 13:20

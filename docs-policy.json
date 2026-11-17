@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "description": "superagent-workbench 文档受众分层；README、PUBLISHING、STATUS 均为 shared。",
+  "include": [
+    "*.md",
+    "**/*.md"
+  ],
+  "defaults": {
+    "audience": "shared",
+    "status": "current"
+  },
+  "rules": [
+    {
+      "glob": "README.md",
+      "audience": "shared",
+      "status": "current"
+    },
+    {
+      "glob": "PUBLISHING.md",
+      "audience": "shared",
+      "status": "current"
+    },
+    {
+      "glob": "STATUS.md",
+      "audience": "shared",
+      "status": "current"
+    }
+  ],
+  "plan_status": {
+    "glob": [
+      "**/PLAN-*.md"
+    ],
+    "allowed": [
+      "not_started",
+      "in_progress",
+      "fixing",
+      "blocked",
+      "done",
+      "rolled_back"
+    ]
+  },
+  "line_limits": {
+    "ai": 120,
+    "shared": 200
+  },
+  "legacy_over_limit": [],
+  "required_reading": []
+}

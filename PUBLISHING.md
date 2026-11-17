@@ -1,3 +1,8 @@
+---
+audience: shared
+status: current
+---
+
 # 发布到 DSH 插件市场
 
 > 状态：GitHub 已发布；npm 待登录发布；市场条目待仓库满 1 天后提交。  

@@ -1,3 +1,8 @@
+---
+audience: shared
+status: current
+---
+
 # 交付台（DSH 插件）
 
 把 superagent 的**工单、执行报告、交付分支改动、工单记录、文档中心、代码仓库浏览**直接放进 DSH 侧栏，
