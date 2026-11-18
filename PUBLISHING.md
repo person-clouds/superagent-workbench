@@ -5,11 +5,12 @@ status: current
 
 # 发布到 DSH 插件市场
 
-> 状态：GitHub 已发布；npm 待登录发布；市场条目待仓库满 1 天后提交。  
+> 状态：GitHub 与 npm 均已发布；市场条目待仓库满 1 天后提交。  
 > 公开仓库：<https://github.com/person-clouds/superagent-workbench>  
 > GitHub Release：<https://github.com/person-clouds/superagent-workbench/releases/tag/v0.1.1>  
 > 安装包：<https://github.com/person-clouds/superagent-workbench/releases/latest/download/dsh-superagent-workbench.tgz>  
-> 当前阻塞：npm 未登录；awesome-dsh-plugin 要求仓库创建满 1 天（创建于 2026-11-14 05:12 UTC）。
+> npm：<https://www.npmjs.com/package/dsh-superagent-workbench>（`0.1.1`，latest）  
+> 当前仅剩：awesome-dsh-plugin 要求仓库创建满 1 天（创建于 2026-11-14 05:12 UTC，2026-11-15 05:12 UTC 后可提 PR）。
 
 ## 市场收录规则（来自 awesome-dsh-plugin/contributing.md）
 
@@ -51,14 +52,17 @@ npm pack --pack-destination release
 GitHub Release 资源名保持无版本号，便于 `latest/download` 长期有效：
 `dsh-superagent-workbench.tgz`。
 
-## 三、发布 npm（推荐，可选）
+## 三、发布 npm
+
+已发布：
+
+<https://www.npmjs.com/package/dsh-superagent-workbench>
+
+安装：
 
 ```bash
-npm login
-npm publish --access public
+dsh plugin --profile web add dsh-superagent-workbench
 ```
-
-如果插件名已被占用，需要先改 `package.json` 的 `name`。
 
 ## 四、提交市场条目
 
